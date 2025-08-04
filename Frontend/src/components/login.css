@@ -63,19 +63,7 @@
   .btn-login:hover {
     background: linear-gradient(90deg, #2575fc, #6a11cb); /* Hover gradient color */
   }
-
-  /* Remember me and forgot password links */
-  .remember-me {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    font-size: 14px;
-  }
-
-  .remember-me a {
-    color: #f0f0f0;
-    text-decoration: underline;
-  }
+  
   .form-check{
     display: flex;
     justify-content: space-between;

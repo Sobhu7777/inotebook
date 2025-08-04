@@ -15,7 +15,6 @@ function Notes() {
   // To handle the update function of the note
   const handleUpdate=(e)=>{
     e.preventDefault()
-    console.log("Updating the note",note)
     editNote(note.id,note.etitle,note.edescription,note.etag)
 }
   // this function will target the name attribute of the input field and set the value of the input field to the state

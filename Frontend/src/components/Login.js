@@ -13,7 +13,6 @@ function Login() {
   const [credentials, setCredentials] = useState({email:"",password:""}) //note states
   const handleSubmit=async(e)=>{
     e.preventDefault()
-    console.log("Form Submmitted")
     // API Integration
     const response = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/Login`, {
       method: "POST",
@@ -23,7 +22,6 @@ function Login() {
       body: JSON.stringify({email:credentials.email,password:credentials.password})
     });
     const json = await response.json(); // In response we will get the token(JWT)
-    console.log(json)
     if(json.success){
       // store the auth-token and redirect
        login(json.token)
@@ -49,13 +47,6 @@ function Login() {
         </div>
         <div className="mb-3">
             <input type="password" className="login-form-control" onChange={onChange} value={credentials.password} id="password" name="password" placeholder="Enter your password" required/>
-        </div>
-        <div className="remember-me mb-3">
-            <div className="form-check">
-            <input type="checkbox" id="rememberMe"/>
-            <label htmlFor="rememberMe">Remember Me</label>
-            </div>
-            <a href="#">Forgot Password?</a>
         </div>
         <button type="submit" className="btn-login">Login</button>
         </form>

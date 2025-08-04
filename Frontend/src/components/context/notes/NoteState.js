@@ -19,7 +19,6 @@ const NoteState = (props) => {
       }
     });
     const json = await response.json();
-    console.log(json);
     setNotes(json)
   }
   // add a note
@@ -49,9 +48,7 @@ const NoteState = (props) => {
       }
     });
     const json = await response.json();
-    console.log(json);
     // Logic to delete in client side
-    console.log("deleting note with id", id);
     const newNotes = notes.filter((note) => {
       return note._id !== id;
     });

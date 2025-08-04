@@ -22,7 +22,6 @@ function SignUp() {
       body: JSON.stringify({name:credentials.name,email:credentials.email,password:credentials.password}),
     });
     const json = await response.json(); // in response we will get the auth-token(the JWT associated with the user created)
-    console.log(json)
     if(json.success){
       // store the auth-token and redirect
       signUp(json.token)
@@ -51,13 +50,6 @@ function SignUp() {
         </div>
         <div className="mb-3">
             <input type="password" className="form-control-signUp" onChange={onChange} id="password" name="password" value={credentials.password} placeholder="Enter your password" required/>
-        </div>
-        <div className="remember-me mb-3">
-            <div className="form-check">
-            <input type="checkbox" id="rememberMe"/>
-            <label htmlFor="rememberMe">Remember Me</label>
-            </div>
-            <a href="#">Forgot Password?</a>
         </div>
         <button type="submit" className="signin-btn">Sign In</button>
         </form>

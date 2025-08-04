@@ -1,6 +1,5 @@
 import { useEffect, useState} from "react"
 import AuthContext from "./AuthContext"
-import {useNavigate} from 'react-router-dom'
 
 const AuthState = (props) => {
     const[isAuthenticated,setisAuthenticated]=useState(false)
