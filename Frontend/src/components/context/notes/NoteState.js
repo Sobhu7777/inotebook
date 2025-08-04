@@ -5,7 +5,7 @@ import alertContext from "../alert/AlertContext";
 const NoteState = (props) => {
   const context=useContext(alertContext)
   const {showalert}=context // to show alert on CUD opertaions 
-  const host = "http://localhost:5000";
+  const host = process.env.REACT_APP_API_URL;
   const notesinitial = [];
   const [notes, setNotes] = useState(notesinitial);
   // Get all notes

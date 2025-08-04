@@ -14,7 +14,7 @@ function SignUp() {
   const handleSubmit=async(e)=>{
     e.preventDefault()
     // API Integration
-    const response = await fetch("http://localhost:5000/api/auth/CreateUser", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/auth/CreateUser`, {
       method: "POST",
       headers: {
         "Content-type": "application/json"
