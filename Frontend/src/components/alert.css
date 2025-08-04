@@ -1,0 +1,11 @@
+.alert-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other elements */
+    left: 0;
+  }
+.alert {
+    margin: 0;
+    border-radius: 0;
+  }

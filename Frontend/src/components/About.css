@@ -1,0 +1,66 @@
+.about-container {
+    padding: 2rem;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background:linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeInGlow 2s ease-in-out;
+  }
+  
+  .about-content {
+    font-size: 1.2rem;
+    color: white;
+    padding: 1.5rem;
+    text-align: justify;
+    line-height: 1.75;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 20px rgba(245, 243, 243, 0.3);
+    text-shadow: none;
+    filter: none;
+  }
+  
+  .github-link {
+    color: #f5a623;
+    font-weight: bold;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .github-link:hover {
+    color: #ffdd57;
+    text-shadow: 0 0 15px #ffdd57;
+  }
+  
+  @keyframes fadeInGlow {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px); /* Start with a small upward shift */
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(0); /* Transition to normal position */
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Final position */
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); /* Soft glow */
+    }
+  }
+  
